@@ -9,28 +9,24 @@ print()
 var_1 = input("Введіть будь ласка вартість покупок через пробіл(копійки вводимо через крапку):\n")
 list_1 = var_1.split()
 list_2 = []
-list_3 = []
 for element in list_1:
     element = float(element)
     list_2.append((element * 6.5) / 100 + element)
+final_price = sum(list_2)
 var_2 = input("Підкажіть у Вас є купон на знижку?(так - 1, ні - 2) - ")
 if var_2 == '2':
-    print("Вартість з урахуванням податку 6.5 %\n", list_2)
+    print("Сума до сплати - ", final_price)
     print()
 else:
     var_3 = input("Знижка на суму чи відсоток ?(сума - 1, відсоток - 2) - ")
     if var_3 == '1':
         var_4 = float(input("Вкажіть суму знижки ?(копійки вводимо через крапку) - "))
-        for element in list_2:
-            list_3.append(element - var_4)
-        print("Вартість з урахуванням податку 6.5 % :\n", list_2)
-        print("Вартість з урахуванням знижки:\n", list_3)
+        final_price = final_price - var_4
+        print("Сума до сплати - ", final_price)
     else:
         var_4 = float(input("Вкажіть відсоток знижки ?(знак розділення крапка) - "))
-        for element in list_2:
-            list_3.append(element - (element * var_4) / 100)
-        print("Вартість з урахуванням податку 6.5 % :\n", list_2)
-        print("Вартість з урахуванням знижки:\n", list_3)
+        final_price = final_price - (final_price * var_4) / 100
+        print("Сума до сплати - ", final_price)
 print()
 print("Задача 2")
 print(
@@ -74,9 +70,12 @@ while n < 3:
     n += 1
     var = int(input("Введіть будь ласка ПІН-код:"))
     if var != pin_code:
-        print("ПІН-код невірний!")
-print()
-print("Вашу карту заблоковано!")
+        print("ПІН-код не вірний!")
+        if n == 3:
+            print("Вашу карту заблоковано!")
+    else:
+        print("ПІН-код вірний!")
+        break
 print()
 print("Задача 4")
 print("Напишіть за допомогою f-string та format.Дві стрічки де буде підставлятись імя та вік з зміних\n"
