@@ -10,15 +10,16 @@ list_add = []
 list_sub = []
 for i in range(2, 10):
     for j in range(2, 10):
-        list_multi.append(i * j)
-        list_add.append(i + j)
-        list_sub.append(i - j)
+        list_multi.append(f"{i} * {j} = {i * j}")
+        list_add.append(f"{i} + {j} = {i + j}")
+        list_sub.append(f"{i} - {j} = {i - j}")
         division = float(i / j)
         division = round(division, 3)
-        list_div.append(division)
+        list_div.append(f"{i} : {j} = {division}")
 dict_table = {"*": list_multi, "/": list_div, "+": list_add, "-": list_sub}
 choice = input("Виберіть яку табличку Ви хочете побачити: додавання, віднімання,множення,ділення ? "
                "Введіть відповідно '+', '-', '/', '*' : ")
 print(dict_table.get(choice))
 finish = input("Натисніть ENTER для завершення роботи.")
 print(finish)
+
