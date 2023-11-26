@@ -6,21 +6,18 @@ print(
     "3. Сортування за кількістю букв у слові.Функція приймає список з слів і повертає відсортований список.\n")
 
 
-def sort_list_asc(list_1=tuple([])):
-    list_1 = list(list_1)
+def sort_list_alpha(list_1: list):
+    list_2 = sorted(list_1, key=len)
+    return list_2
+
+
+def sort_list_asc(list_1: list):
     list_2 = sorted(list_1)
     return list_2
 
 
-def sort_list_desc(list_1=tuple([])):
-    list_1 = list(list_1)
+def sort_list_desc(list_1: list):
     list_2 = sorted(list_1, reverse=True)
-    return list_2
-
-
-def sort_list_alpha(list_1=tuple([])):
-    list_1 = list(list_1)
-    list_2 = sorted(list_1, key=len)
     return list_2
 
 
