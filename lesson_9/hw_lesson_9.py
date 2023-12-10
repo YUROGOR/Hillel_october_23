@@ -1,7 +1,7 @@
 print("Задача 1\n"
       "додайте requirements.txt на ваш гіт\n")
 
-print("Результати - https://github.com/YUROGOR/Hillel_october_23/tree/main/lesson_9\n")
+print("Результати - https://github.com/YUROGOR/Hillel_october_23/tree/main\n")
 
 print("Задача 2\n"
       "Виберіть будь-яку помилку яка вам подобається і зробіть функцію яка перевіряє на цю помилку"
