@@ -29,7 +29,10 @@ class TestRandom2:
     # тест на сам жарт
     # + 3 тести
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
     def test_status_code(self):
         assert self.status_code == 200
 
